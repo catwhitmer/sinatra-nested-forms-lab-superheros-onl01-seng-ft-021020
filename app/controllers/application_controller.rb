@@ -14,7 +14,7 @@ class App < Sinatra::Base
     members = params[:team][:members]
 
     members.each do |member_params|
-    SuperHero.new({name: member_params[:name], power: member_params[:power], bio: member_params[:bio]})
+    SuperHero.new(name: member_params[:name], power: member_params[:power], bio: member_params[:bio])
     end
       @super_heroes = SuperHero.all
 
